@@ -16,9 +16,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from dnsmanage.views import current_datetime
 from dnsmanage.app.test_letter import re_letter
+from dnsmanage.app.analysis_file import analysis_file
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^time/$', current_datetime),
     url(r'^letter/$', re_letter),
+    url(r'^file/', analysis_file),
 ]

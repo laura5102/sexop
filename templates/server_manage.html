@@ -3,33 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>Sex OP | Django </title>
-    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
-    <link rel="stylesheet" type="text/css" href="/static/css/forms.css" />
-    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/css/ie.css" /><![endif]-->
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
 
-    <script type="text/javascript">window.__admin_media_prefix__ = "/static/";</script>
+    <script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
     <script type="text/javascript">window.__admin_utc_offset__ = "28800";</script>
 
-    <script type="text/javascript" src="/jsi18n/"></script>
-    <script type="text/javascript" src="/static/js/core.js"></script>
-    <script type="text/javascript" src="/static/js/jquery.js"></script>
-    <script type="text/javascript" src="/static/js/jquery.init.js"></script>
-    <script type="text/javascript" src="/static/js/admin/RelatedObjectLookups.js"></script>
-    <script type="text/javascript" src="/static/js/actions.js"></script>
-    <script type="text/javascript" src="/static/js/SelectBox.js"></script>
-    <script type="text/javascript" src="/static/js/SelectFilter2.js"></script>
-    <script type="text/javascript" src="/static/js/related-widget-wrapper.js"></script>
-    <script type="text/javascript" src="/static/js/calendar.js"></script>
-    <script type="text/javascript" src="/static/js/admin/DateTimeShortcuts.js"></script>
+    <script type="text/javascript" src="/admin/jsi18n/"></script>
+    <script type="text/javascript" src="/static/admin/js/core.js"></script>
+    <script type="text/javascript" src="/static/admin/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+    <script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+    <script type="text/javascript" src="/static/admin/js/actions.js"></script>
+    <script type="text/javascript" src="/static/admin/js/SelectBox.js"></script>
+    <script type="text/javascript" src="/static/admin/js/SelectFilter2.js"></script>
+    <script type="text/javascript" src="/static/admin/js/related-widget-wrapper.js"></script>
+    <script type="text/javascript" src="/static/admin/js/calendar.js"></script>
+    <script type="text/javascript" src="/static/admin/js/admin/DateTimeShortcuts.js"></script>
     <meta name="robots" content="NONE,NOARCHIVE" />
 </head>
 
 <body class=" app-auth model-user change-form">
- <div id="user-tools">
-     Welcome,
-     <strong>admin</strong>.
-     <a href="/">View site</a> /
- </div>
+<!-- Container -->
+<div id="container">
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+            <h1 id="site-name"><a href="/admin/">Sex OP</a></h1>
+        </div>
+        <div id="user-tools">
+                Welcome,
+                <strong>{{ person_name }}</strong>.
+                    <a href="/">View site</a> /
+                    <a href="/admin/password_change/">Change password</a> /
+                    <a href="/admin/logout/">Log out</a>
+        </div>
+    </div>
+    <!-- END Header -->
+
+<div class="breadcrumbs" style="height: 40px">
+<a href="/admin/">Home</a>
+&rsaquo; <a href="/admin/auth/">Authentication and Authorization</a>
+&rsaquo; <a href="/admin/auth/user/">Users</a>
+&rsaquo; {{ person_name }}
+</div>
+
+    <!-- Content -->
+     <fieldset class="module aligned ">
+        <h2>Nginx</h2>
+            <!-- <div class="form-row field-first_name"> -->
+            <div id="content" class="colMS">
+                <div class="form-row field-first_name">
+                    <label for="id_user" >user</label >
+                    <textarea id="id_user" cols=80 rows=5>{{ user }}</textarea>
+                </div>
+            </div>
+
+            <div id="content" class="colMS">
+                <div class="form-row field-first_name">
+                    <label for="id_worker" >worker_processes</label >
+                    <textarea id="id_worker" cols=80 rows=5>{{ worker_processes }}</textarea>
+                </div>
+            </div>
+
+            <div id="content" class="colMS">
+                <div class="form-row field-first_name">
+                    <label for="id_error_log" >user</label >
+                    <textarea id="id_error_log" cols=80 rows=5>{{ error_log }}</textarea>
+                </div>
+            </div>
+
+            <div id="content" class="colMS">
+                <div class="form-row field-first_name">
+                    <label for="id_pid" >pid</label >
+                    <textarea id="id_pid" cols=80 rows=5>{{ pid }}</textarea>
+                </div>
+            </div>
+
+            <div id="content" class="colMS">
+                <div class="form-row field-first_name">
+                    <label for="id_events" >events</label >
+                    <textarea id="id_events" cols=80 rows=5>{{ events }}</textarea>
+                </div>
+            </div>
+
+            <div id="content" class="colMS">
+                <div class="form-row field-first_name">
+                    <label for="id_http" >http</label >
+                    <textarea id="id_http" cols=80 rows=5>{{ http }}</textarea>
+                </div>
+            </div>
+
+    </fieldset>
+
+    <!-- END Content -->
+
+<!-- END Container -->
+
+</div>
 
 </body>
-
