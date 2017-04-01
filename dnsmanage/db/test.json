@@ -1,0 +1,39 @@
+{
+	"Server":[{
+		"id": "1",
+		"IP": "240.71",
+		"nginxPath": "/usr/local/nginx",
+		"product": {
+			"scm": "1080",
+			"shopservice": "31880"
+		}
+	},
+	{
+		"id": "2",
+		"IP": "240.72",
+		"nginxPath": "/usr/local/nginx",
+		"product": {
+			"scm": "1080",
+			"shopservice": "31880"
+		}
+	},
+	{
+		"id": "3",
+		"IP": "240.73",
+		"nginxPath": "/usr/local/nginx",
+		"product": {
+			"scm": "1080",
+			"shopservice": "31880"
+		}
+	},
+	{
+		"id": "4",
+		"IP": "240.74",
+		"nginxPath": "/usr/local/nginx",
+		"product": {
+			"scm": "1080",
+			"shopservice": "31880"
+		}
+	}
+	]
+}
